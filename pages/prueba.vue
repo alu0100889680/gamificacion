@@ -1,18 +1,24 @@
 <template>
-  <section class="container">
+  <div>
+    <Header/>
+    <!-- <Logo/> -->
+  </div>
+  <!-- <section class="container">
     <div>
       <logo/>
-      <h1 class="title">Pacoooo</h1>
+      <h1 class="title">Prueba</h1>
     </div>
-  </section>
+  </section>-->
 </template>
 
 <script>
 import Logo from "~/components/Logo.vue";
+import Header from "~/components/Header.vue";
 
 export default {
   components: {
-    Logo
+    Logo,
+    Header
   }
 };
 </script>
@@ -25,6 +31,10 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+b-navbar {
+  background-color: red;
 }
 
 .title {
