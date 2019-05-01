@@ -33,10 +33,6 @@ export default {
   text-align: center;
 }
 
-b-navbar {
-  background-color: red;
-}
-
 .title {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

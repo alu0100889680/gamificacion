@@ -1,18 +1,27 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">Pacoooo</h1>
-    </div>
-  </section>
+  <div>
+    <Header/>
+  </div>
 </template>
 
 <script>
 import Logo from "~/components/Logo.vue";
+import Header from "~/components/Header.vue";
 
 export default {
+  data() {
+    return {
+      title: "Inicio - Gamificación"
+    };
+  },
+  head() {
+    return {
+      title: this.title
+    };
+  },
   components: {
-    Logo
+    Logo,
+    Header
   }
 };
 </script>

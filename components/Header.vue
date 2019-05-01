@@ -1,8 +1,7 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" type="dark" variant="primary">
-      <b-navbar-brand href="#">Gamificación</b-navbar-brand>
-
+    <b-navbar toggleable="lg" type="dark" class="navbar1">
+      <b-navbar-brand class="logo" href="/">Gamificación</b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
@@ -11,8 +10,13 @@
           <b-nav-item href="#">Información</b-nav-item>
         </b-navbar-nav>
 
+        <b-navbar-nav class="ml-auto" right>
+          <b-nav-item href="/registro">Registro</b-nav-item>
+          <b-nav-item href="/login">Iniciar sesión</b-nav-item>
+        </b-navbar-nav>
+
         <!-- Right aligned nav items -->
-        <b-navbar-nav class="ml-auto">
+        <b-navbar-nav class="ml-auto" hidden>
           <b-nav-item-dropdown right>
             <!-- Using 'button-content' slot -->
             <template slot="button-content">
@@ -29,7 +33,7 @@
 
 
 <style>
-b-navbar {
-  background-color: red;
+.nav li {
+  padding-right: 225px;
 }
 </style>
