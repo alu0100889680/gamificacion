@@ -3,7 +3,7 @@
     <b-navbar toggleable="lg" type="dark" class="navbar1">
       <div id="logo">
         <a href="/" class="text-white">
-          <i class="fas fa-desktop"></i>
+          <i class="fa fa-th-large"></i>
         </a>
         <b-navbar-brand class="logo" href="/">Gami</b-navbar-brand>
       </div>

@@ -1,6 +1,13 @@
 <template>
   <div>
     <Header/>
+    <div>
+      <div class="bigbox">
+        <div class="col-lg-12 text-white">
+          <h1>Bienvenid@</h1>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -56,5 +63,15 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+.bigbox {
+  width: 100%;
+  margin: 0 auto;
+  background-size: cover;
+  background-image: url("../assets/img/2.jpg");
+  /* background-color: aquamarine; */
+  height: 90vh;
+  text-align: center;
 }
 </style>
