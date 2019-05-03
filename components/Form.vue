@@ -13,7 +13,9 @@
               <label for="exampleInputPassword1">Contraseña</label>
               <input type="password" class="form-control" id="exampleInputPassword1">
             </div>
-            <button type="submit" class="btn btn-primary text-center">Enviar</button>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary btn-md">Enviar</button>
+            </div>
           </form>
         </div>
       </div>

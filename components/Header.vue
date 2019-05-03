@@ -1,7 +1,12 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" class="navbar1">
-      <b-navbar-brand class="logo" href="/">Gamificación</b-navbar-brand>
+      <div id="logo">
+        <a href="/" class="text-white">
+          <i class="fas fa-desktop"></i>
+        </a>
+        <b-navbar-brand class="logo" href="/">Gami</b-navbar-brand>
+      </div>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
@@ -35,5 +40,12 @@
 <style>
 .nav li {
   padding-right: 225px;
+}
+
+#logo {
+  margin-left: 12px;
+  margin-right: 12px;
+  font-size: 27px;
+  color: white !important;
 }
 </style>
