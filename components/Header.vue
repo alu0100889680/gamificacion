@@ -14,6 +14,8 @@
           <b-nav-item href="#">Tutorial</b-nav-item>
           <b-nav-item href="#">Información</b-nav-item>
         </b-navbar-nav>
+        <!-- <li class="divider"></li> -->
+        <hr>
 
         <b-navbar-nav class="ml-auto" right>
           <b-nav-item href="/registro">Registro</b-nav-item>

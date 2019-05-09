@@ -48,7 +48,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [{ src: "~plugins/vue-select", ssr: false }],
 
   /*
    ** Nuxt.js modules
