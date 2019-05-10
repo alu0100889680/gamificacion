@@ -1,14 +1,14 @@
 <template>
   <div>
     <Header/>
-    <div>
-      <div class="bigbox">
-        <div class="col-lg-12 text-white">
-          <h1>Bienvenid@</h1>
-        </div>
-      </div>
-    </div>
+    <!-- <Logo/> -->
   </div>
+  <!-- <section class="container">
+    <div>
+      <logo/>
+      <h1 class="title">Prueba</h1>
+    </div>
+  </section>-->
 </template>
 
 <script>
@@ -16,16 +16,6 @@ import Logo from "~/components/Logo.vue";
 import Header from "~/components/Header.vue";
 
 export default {
-  data() {
-    return {
-      title: "Inicio - Gamificación"
-    };
-  },
-  head() {
-    return {
-      title: this.title
-    };
-  },
   components: {
     Logo,
     Header
@@ -63,15 +53,5 @@ export default {
 
 .links {
   padding-top: 15px;
-}
-
-.bigbox {
-  width: 100%;
-  margin: 0 auto;
-  background-size: cover;
-  background-image: url("../assets/img/2.jpg");
-  /* background-color: aquamarine; */
-  height: 90vh;
-  text-align: center;
 }
 </style>
