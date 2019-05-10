@@ -20,6 +20,8 @@
         <b-navbar-nav class="ml-auto" right>
           <b-nav-item href="/registro">Registro</b-nav-item>
           <b-nav-item href="/login">Iniciar sesión</b-nav-item>
+          <b-nav-item href="/perfil">Perfil</b-nav-item>
+
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
