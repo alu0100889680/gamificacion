@@ -43,7 +43,7 @@ async function start() {
     badge: true
   });
 
-  app.get("/", (req, res) => {
+  app.post("/", (req, res) => {
     db.collection("usuarios")
       .find()
       .toArray((err, result) => {

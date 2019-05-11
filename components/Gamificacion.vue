@@ -3,8 +3,8 @@
 
 <script>
 export default {
-  data: {
-    hora: "hola"
+  data() {
+    return { hora: "adios" };
   }
 };
 </script>

@@ -3,8 +3,20 @@
     <Header/>
     <div>
       <div class="bigbox">
-        <div class="col-lg-12 text-white">
-          <h1>Bienvenid@</h1>
+        <div class="col-lg-12 title-content">
+          <h1 class="title text-white">Bienvenid@</h1>
+        </div>
+        <div class="row half bg-light">
+          <div class="col-md-12 p-5 ppal-bottom">
+            <h2>Iniciar sesión</h2>
+            <a href="/login" class="stretched-link"></a>
+          </div>
+        </div>
+        <div class="row half bg-light">
+          <div class="col-md-12 p-5 ppal-bottom">
+            <h2>Registrarse</h2>
+            <a href="/registro" class="stretched-link"></a>
+          </div>
         </div>
       </div>
     </div>
@@ -34,6 +46,18 @@ export default {
 </script>
 
 <style>
+.half {
+  width: 40%;
+  margin: auto;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.ppal-bottom {
+  background-color: rgb(106, 180, 209);
+  color: white;
+}
+
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -44,13 +68,12 @@ export default {
 }
 
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
+  /* font-weight: 300; */
+  font-size: 6em;
   letter-spacing: 1px;
+  padding-top: 90px;
+  padding-bottom: 60px;
+  font-family: "Pacifico";
 }
 
 .subtitle {
@@ -69,9 +92,38 @@ export default {
   width: 100%;
   margin: 0 auto;
   background-size: cover;
-  background-image: url("../assets/img/2.jpg");
+  background-image: url("/img/back2.jpg");
   /* background-color: aquamarine; */
-  height: 90vh;
+  height: 100vh;
   text-align: center;
+}
+
+@media only screen and (max-width: 1077px) {
+  .half {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .title {
+    font-size: 4.5em;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  .half {
+    width: 80%;
+    margin-top: 5px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .title {
+    font-size: 3.5em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
 }
 </style>

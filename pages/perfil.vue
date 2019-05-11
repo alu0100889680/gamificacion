@@ -7,30 +7,72 @@
         <div class="col-lg-12 col-xs-12 col-md-12">
           <img
             class="card-img-top col-lg-6 rounded-sm"
-            src="/conejito.png"
+            v-bind:src="image"
             title="Foto de perfil"
             alt="Foto de perfil"
           >
           <h2 class="sub">
-            <b>Nivel:</b> 1. Conejito
+            <b>Nivel:</b>
+            <p>{{nivel}}. {{animal}}</p>
           </h2>
         </div>
         <div class="card-body">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Nombre:</li>
-            <li class="list-group-item">Edad:</li>
-            <li class="list-group-item">Nivel:</li>
-            <li class="list-group-item">
-              Puntuación: {{hora}}
+            <li class="list-group-item pb-lg-5">
+              <div class="row">
+                <div class="col lg-6 inline">
+                  <b>Puntuación:</b>
+                </div>
+                <div class="col lg-6 inline right">
+                  <p>{{puntuacion_total}}</p>
+                </div>
+              </div>
+
               <div class="progress">
                 <div
                   class="progress-bar progress-bar-striped"
                   role="progressbar"
-                  style="width: 50%"
-                  aria-valuenow="50"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
+                  v-bind:style="width"
+                  v-bind:aria-valuenow="puntuacion_actual"
+                  v-bind:aria-valuemin="0"
+                  v-bind:aria-valuemax="100"
                 ></div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12 right">
+                  <b>{{puntuacion_actual}} / {{puntuacion_final}}</b>
+                </div>
+              </div>
+              <h6 class="text-success center">(Faltan {{restan}}xp para pasar al siguiente nivel)</h6>
+            </li>
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col lg-6 inline">
+                  <b>Nombre:</b>
+                </div>
+                <div class="col lg-6 inline right">
+                  <p>{{nombre}}</p>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col lg-6 inline">
+                  <b>Edad:</b>
+                </div>
+                <div class="col lg-6 inline right">
+                  <p>{{edad}}</p>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col lg-6 inline">
+                  <b>Periodo:</b>
+                </div>
+                <div class="col lg-6 inline right">
+                  <p>{{periodo}}</p>
+                </div>
               </div>
             </li>
           </ul>
@@ -43,12 +85,31 @@
 <script>
 import Logo from "~/components/Logo.vue";
 import Header from "~/components/Header.vue";
-import Gamificacion from "~/components/Gamificacion.vue";
 
 export default {
+  //   data: {
+  //     items: [
+  //       {
+  //         label: "progress",
+  //         attrs: { style: "width: " + "5", aria: "_blank", aria-valueadmin: "Some title" }
+  //       }
+  //     ]
+  //   },
   data() {
     return {
-      title: "Perfil de usuario"
+      title: "Perfil de usuario",
+      image: "img/conejito.png",
+      mensaje: "holaaaaaa",
+      nombre: "Aranza",
+      hora: "jeje",
+      edad: "22",
+      periodo: "Infantil",
+      nivel: "1",
+      animal: "Conejito",
+      puntuacion_actual: "50",
+      puntuacion_final: "100",
+      width: "width:" + 50 + "%;",
+      restan: "50"
     };
   },
   head() {
@@ -64,12 +125,24 @@ export default {
 </script>
 
 <style>
+p {
+  display: inline;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.right {
+  text-align: right;
+}
+
 .card {
   float: none; /* Added */
   text-align: center;
   margin: 0 auto;
   margin-top: 40px;
-  padding: 20px 15px 20px 15px;
+  padding: 15px 10px 0px 10px;
 }
 
 .card-body {
@@ -80,7 +153,10 @@ export default {
 }
 
 .progress {
-  margin-top: 10px;
+  margin-top: 15px;
+}
+h6 {
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 992px) {

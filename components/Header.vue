@@ -13,6 +13,7 @@
         <b-navbar-nav>
           <b-nav-item href="#">Tutorial</b-nav-item>
           <b-nav-item href="#">Información</b-nav-item>
+          <b-nav-item href="/actividades">Actividades</b-nav-item>
         </b-navbar-nav>
         <!-- <li class="divider"></li> -->
         <hr>
@@ -21,7 +22,6 @@
           <b-nav-item href="/registro">Registro</b-nav-item>
           <b-nav-item href="/login">Iniciar sesión</b-nav-item>
           <b-nav-item href="/perfil">Perfil</b-nav-item>
-
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -44,12 +44,5 @@
 <style>
 .nav li {
   padding-right: 225px;
-}
-
-#logo {
-  margin-left: 12px;
-  margin-right: 12px;
-  font-size: 27px;
-  color: white !important;
 }
 </style>

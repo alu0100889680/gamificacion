@@ -2,8 +2,8 @@
   <section id="loginform" class="outer-wrapper">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
           <div class="card">
             <h2 v-if="login" class="text-center">Inicio de sesión</h2>
             <h2 v-if="signup" class="text-center">Registro</h2>
@@ -49,7 +49,7 @@
             </form>
           </div>
         </div>
-        <div class="col-lg-4"></div>
+        <div class="col-lg-2"></div>
       </div>
     </div>
   </section>
@@ -66,6 +66,7 @@
 .card {
   padding: 25px 20px 25px 20px;
   margin: 0 auto;
+  width: 40rem;
 }
 
 .center {
