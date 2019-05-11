@@ -9,15 +9,15 @@
       </ol>
     </nav>
 
-    <div class="row mx-auto mt-5" style="width: 1100px;">
-      <div class="col-lg-12 col-md-6">
+    <div class="row mx-auto mt-5">
+      <div class="col-lg-12">
         <div class="card text">
           <div class="card-header success-color white-text">
-            <h2>Actividad de hace rnose que seasdaas</h2>
+            <h3>Actividad de hace rnose que seasdaas</h3>
           </div>
           <div class="card-body">
             <div class="row">
-              <div class="card-img-top col-lg-4 rounded-sm-lg-4">
+              <div class="card-img-top col-lg-4">
                 <img
                   class="card-img-top rounded-sm"
                   src="/img/actividad.png"
@@ -91,16 +91,51 @@
 </template>
 
 <style>
+.card {
+  margin: 0 auto;
+  width: 40rem;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border: 2px solid lightgrey;
+  margin: 0px 0px 7px 0px;
+  border-radius: 8px;
+  padding: 20px 20px 20px 20px;
+}
+
+@media only screen and (max-width: 780px) {
+  .card {
+    width: 35rem !important;
+  }
+  img {
+    max-width: 50%;
+    max-height: 50%;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .card {
+    width: 27rem !important;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .card {
+    width: 20rem !important;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .card {
+    width: 15rem !important;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+}
 </style>
 
 <script>
-// $(document).ready(function() {
-//   $('[data-toggle="popover"]').popover();
-// });
-
-$("#myModal").on("shown.bs.modal", function() {
-  $("#myInput").trigger("focus");
-});
 export default {
   data() {
     return {

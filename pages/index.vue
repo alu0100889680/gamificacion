@@ -110,7 +110,7 @@ export default {
     padding-bottom: 40px;
   }
   h2 {
-    font-size: 1.5em;
+    font-size: 3em;
   }
   .half {
     width: 80%;
