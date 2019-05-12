@@ -24,7 +24,7 @@
                   <b>Puntuación:</b>
                 </div>
                 <div class="col lg-6 inline right">
-                  <p>{{puntuacion_total}}</p>
+                  <p>{{puntuaciacion_total}}</p>
                 </div>
               </div>
 
@@ -79,6 +79,12 @@
         </div>
       </div>
     </div>
+    <div>
+      <ul>
+        <li v-for="actividad in actividades">{{actividad.titulo}}</li>
+      </ul>
+    </div>
+    <pre>{{ $data | json }}</pre>
   </div>
 </template>
 
@@ -87,14 +93,6 @@ import Logo from "~/components/Logo.vue";
 import Header from "~/components/Header.vue";
 
 export default {
-  //   data: {
-  //     items: [
-  //       {
-  //         label: "progress",
-  //         attrs: { style: "width: " + "5", aria: "_blank", aria-valueadmin: "Some title" }
-  //       }
-  //     ]
-  //   },
   data() {
     return {
       title: "Perfil de usuario",
@@ -107,9 +105,14 @@ export default {
       nivel: "1",
       animal: "Conejito",
       puntuacion_actual: "50",
+      puntuaciacion_total: "50",
       puntuacion_final: "100",
       width: "width:" + 50 + "%;",
-      restan: "50"
+      restan: "50",
+      actividades: [
+        { titulo: "Salir", descripcion: "Una tareita", completado: false },
+        { titulo: "Comer", descripcion: "Otra tareita", completado: false }
+      ]
     };
   },
   head() {

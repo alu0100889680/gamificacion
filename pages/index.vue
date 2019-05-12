@@ -7,13 +7,13 @@
           <h1 class="title text-white">Bienvenid@</h1>
         </div>
         <div class="row half bg-light">
-          <div class="col-md-12 p-5 ppal-bottom">
+          <div class="col-md-12 p-5 bg-info text-white">
             <h2>Iniciar sesión</h2>
             <a href="/login" class="stretched-link"></a>
           </div>
         </div>
         <div class="row half bg-light">
-          <div class="col-md-12 p-5 ppal-bottom">
+          <div class="col-md-12 p-5 bg-info text-white">
             <h2>Registrarse</h2>
             <a href="/registro" class="stretched-link"></a>
           </div>
@@ -53,10 +53,10 @@ export default {
   margin-top: 20px;
 }
 
-.ppal-bottom {
+/* .ppal-bottom {
   background-color: rgb(106, 180, 209);
   color: white;
-}
+} */
 
 .container {
   margin: 0 auto;
@@ -110,7 +110,7 @@ export default {
     padding-bottom: 40px;
   }
   h2 {
-    font-size: 3em;
+    font-size: 1.5em;
   }
   .half {
     width: 80%;

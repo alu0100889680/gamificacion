@@ -23,10 +23,10 @@ img {
   max-height: 100%;
   width: auto;
   height: auto;
-  border: 2px solid lightgrey;
   margin: 0px 0px 7px 0px;
-  border-radius: 8px;
-  padding: 20px 20px 20px 20px;
+  padding: 10px 10px 10px 10px;
+  display: block;
+  margin: auto;
 }
 </style>
 

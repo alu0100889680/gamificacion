@@ -8,111 +8,84 @@
         <li class="breadcrumb-item active" aria-current="page">Actividad</li>
       </ol>
     </nav>
-
-    <div class="row mx-auto mt-5">
-      <div class="col-lg-12">
-        <div class="card text">
-          <div class="card-header success-color white-text">
-            <h3>Actividad de hace rnose que seasdaas</h3>
-          </div>
-          <div class="card-body">
-            <div class="row">
-              <div class="card-img-top col-lg-4">
-                <img
-                  class="card-img-top rounded-sm"
-                  src="/img/actividad.png"
-                  title="Foto de perfil"
-                  alt="Foto de perfil"
-                >
+    <ul class="list-group list-group-flush">
+      <li v-for="actividad in actividades" class>
+        <div class="row mx-auto mt-3">
+          <div class="col-lg-12">
+            <div class="card bg-info text-white mb-3 text">
+              <div class="card-header success-color white-text">
+                <h3>{{actividad.titulo}}</h3>
               </div>
-              <div class="col-lg-8">
-                <!-- <h4 class="card-title">Special title treatment</h4> -->
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item pb-lg-1">
-                    <b>Título:</b>
-                  </li>
-                  <li class="list-group-item pb-lg-1">
-                    <b>Categoría:</b>
-                  </li>
-                  <li class="list-group-item pb-lg-1">
-                    <b>Dificultad:</b>
-                  </li>
-                  <li class="list-group-item pb-lg-1">
-                    <b>Creado por:</b>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="row">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item pb-lg-1">
-                  <b>Descripción:</b>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- Button trigger modal -->
-          <button
-            type="button"
-            class="btn btn-primary"
-            data-toggle="modal"
-            data-target="#exampleModal"
-          >Launch demo modal</button>
-
-          <!-- Modal -->
-          <div
-            class="modal fade"
-            id="exampleModal"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">...</div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-3 col-mg-3 col-xs-3">
+                    <img
+                      class="card-img-top"
+                      src="/img/actividad.png"
+                      title="Foto de perfil"
+                      alt="Foto de perfil"
+                    >
+                    <div class="col-lg-12 text-center">
+                      <a href="/" class="btn btn-danger btn-md">Realizar actividad</a>
+                    </div>
+                  </div>
+                  <div id="este" class="col-lg-8">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item bg-info pb-lg-1">
+                        <div class="d-inline float-left">
+                          <b>Categoría:</b>
+                        </div>
+                        <div class="float-right d-inline">{{actividad.categoria}}</div>
+                      </li>
+                      <li class="list-group-item bg-info pb-lg-1">
+                        <div class="d-inline float-left">
+                          <b>Dificultad:</b>
+                        </div>
+                        <div class="float-right d-inline">{{actividad.dificultad}}</div>
+                      </li>
+                      <li class="list-group-item bg-info pb-lg-1">
+                        <div class="d-inline float-left">
+                          <b>Creado por:</b>
+                        </div>
+                        <div class="float-right d-inline">{{actividad.creadopor}}</div>
+                      </li>
+                      <li class="list-group-item bg-info pb-lg-1">
+                        <div class="d-inline float-left">
+                          <b>Descripción:</b>
+                        </div>
+                        <div class="float-right d-inline">{{actividad.descripcion}}</div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </template>
 
 <style>
 .card {
   margin: 0 auto;
-  width: 40rem;
-}
-img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  border: 2px solid lightgrey;
-  margin: 0px 0px 7px 0px;
-  border-radius: 8px;
-  padding: 20px 20px 20px 20px;
+  width: 900px;
 }
 
-@media only screen and (max-width: 780px) {
+.card-header {
+  padding: 0.4rem 1rem 0rem;
+}
+@media only screen and (max-width: 1000px) {
   .card {
     width: 35rem !important;
   }
   img {
     max-width: 50%;
     max-height: 50%;
+  }
+  .card-img-top {
+    width: 50%;
   }
 }
 @media only screen and (max-width: 620px) {
@@ -139,7 +112,42 @@ img {
 export default {
   data() {
     return {
-      title: "Actividad"
+      title: "Actividad",
+      actividades: [
+        {
+          titulo: "Salir",
+          categoria: "Algoritmia",
+          descripcion:
+            "Una tareita. Hay que ha sjdak sjdak lsdj kajs dkaj sñdj lkajlkd jas ñlkj dkaljsdkl ajslkd jaksjdl lalaske ha sjdak sjdak lsdj kajs dkaj sñdj lkajlkd jas ñlkj dkaljsdkl ajslkd jaksjdl lae ha sjdak sjdak lsdj kajs dkaj sñdj lkajlkd jas ñlkj dkaljsdkl ajslkd jaksjdl la ",
+          dificultad: "1",
+          creadopor: "Aranza C",
+          completado: false
+        },
+        {
+          titulo: "Comer",
+          categoria: "Patrones",
+          descripcion: "Otra tareita",
+          dificultad: "2",
+          creadopor: "Aranza C",
+          completado: false
+        },
+        {
+          titulo: "Salir",
+          categoria: "Algoritmia",
+          descripcion: "Una tareita",
+          dificultad: "1",
+          creadopor: "Aranza C",
+          completado: false
+        },
+        {
+          titulo: "Salir",
+          categoria: "Algoritmia",
+          descripcion: "Una tareita",
+          dificultad: "1",
+          creadopor: "Aranza C",
+          completado: false
+        }
+      ]
     };
   },
   head() {
