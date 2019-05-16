@@ -32,7 +32,7 @@
                   <option>14</option>
                   <option>15</option>
                   <option>16</option>
-                  <option>&gt 16</option>
+                  <option>&gt16</option>
                 </select>
               </div>
               <div class="form-group">
@@ -108,6 +108,13 @@ form {
 </style>
 
 <script>
+// let Tarea = require("../server/models/Tarea.js");
+
+// new Tarea({
+//   id: 1,
+//   nombre: nombre
+// });
+
 export default {
   computed: {
     login: function() {

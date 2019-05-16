@@ -1,13 +1,16 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
 <template>
   <div>
-    <nav aria-label="breadcrumb">
+    <!-- <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="/actividades">Actividades</a>
         </li>
         <li class="breadcrumb-item active" aria-current="page">Actividad</li>
       </ol>
-    </nav>
+    </nav>-->
     <ul class="list-group list-group-flush">
       <li v-for="actividad in actividades" class>
         <div class="row mx-auto mt-3">
@@ -109,47 +112,47 @@
 </style>
 
 <script>
+// // Your web app's Firebase configuration
+// var firebaseConfig = {
+//   apiKey: "AIzaSyAtGV1ggJO-8AHfXGaSyvhg2SJmON2_rTg",
+//   authDomain: "gami-314da.firebaseapp.com",
+//   databaseURL: "https://gami-314da.firebaseio.com",
+//   projectId: "gami-314da",
+//   storageBucket: "gami-314da.appspot.com",
+//   messagingSenderId: "626672250699",
+//   appId: "1:626672250699:web:a1f7047d2a72eb2d"
+// };
+// // Initialize Firebase
+// firebase.initializeApp(firebaseConfig);
+
 export default {
   data() {
     return {
       title: "Actividad",
+      // actividades: []
       actividades: [
         {
-          titulo: "Salir",
-          categoria: "Algoritmia",
+          titulo: "Algoritmos de ordenación de números",
+          categoria: "Ordenación, Algoritmos",
           descripcion:
-            "Una tareita. Hay que ha sjdak sjdak lsdj kajs dkaj sñdj lkajlkd jas ñlkj dkaljsdkl ajslkd jaksjdl lalaske ha sjdak sjdak lsdj kajs dkaj sñdj lkajlkd jas ñlkj dkaljsdkl ajslkd jaksjdl lae ha sjdak sjdak lsdj kajs dkaj sñdj lkajlkd jas ñlkj dkaljsdkl ajslkd jaksjdl la ",
-          dificultad: "1",
+            "Escribe números del 1 al 10 desordenados en una hoja de papel, a continuación sigue el siguiente algoritmo...",
+          dificultad: "Media",
           creadopor: "Aranza C",
           completado: false
         },
         {
-          titulo: "Comer",
-          categoria: "Patrones",
-          descripcion: "Otra tareita",
-          dificultad: "2",
-          creadopor: "Aranza C",
-          completado: false
-        },
-        {
-          titulo: "Salir",
-          categoria: "Algoritmia",
-          descripcion: "Una tareita",
-          dificultad: "1",
-          creadopor: "Aranza C",
-          completado: false
-        },
-        {
-          titulo: "Salir",
-          categoria: "Algoritmia",
-          descripcion: "Una tareita",
-          dificultad: "1",
+          titulo: "Ordena tu cuarto computacionalmente ",
+          categoria: "Algoritmos, Secuencias",
+          descripcion:
+            "En primer lugar, escribe en un papel los pasos necesarios para ordenar tu cuarto, después...",
+          dificultad: "Fácil",
           creadopor: "Aranza C",
           completado: false
         }
       ]
     };
   },
+  methods: {},
   head() {
     return {
       title: this.title

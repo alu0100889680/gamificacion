@@ -81,7 +81,7 @@
     </div>
     <div>
       <ul>
-        <li v-for="actividad in actividades">{{actividad.titulo}}</li>
+        <!-- <li v-for="actividad in actividades">{{actividad.titulo}}</li> -->
       </ul>
     </div>
     <pre>{{ $data | json }}</pre>
@@ -104,11 +104,11 @@ export default {
       periodo: "Infantil",
       nivel: "1",
       animal: "Conejito",
-      puntuacion_actual: "50",
-      puntuaciacion_total: "50",
-      puntuacion_final: "100",
+      puntuacion_actual: "25",
+      puntuaciacion_total: "25",
+      puntuacion_final: "50",
       width: "width:" + 50 + "%;",
-      restan: "50",
+      restan: "25",
       actividades: [
         { titulo: "Salir", descripcion: "Una tareita", completado: false },
         { titulo: "Comer", descripcion: "Otra tareita", completado: false }
