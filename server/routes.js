@@ -1,6 +1,14 @@
 const { Router } = require("express");
 const mongoose = require("mongoose");
 const Model = require("./models/Tarea");
+var path = require('path');
+var expressVue = require("express-vue");
+const express = require('express')
+ 
+var app = express();
+ 
+const expressVueMiddleware = expressVue.init();
+app.use(expressVueMiddleware);
 
 const router = Router();
 
@@ -28,12 +36,24 @@ router.get("/users", function(req, res) {
   });
 });
 
+
 // post
 
 router.post("/login", function(req, res) {
   let model = new Model(req.body);
   model.save();
-  res.status(201).send(model);
+
+  // res.send('login');
+  // console.log(path.join(__dirname + '/pages/login.vue') )
+  // res.render(path.join(__dirname + '../','../pages/login'));
+
+  // res.renderVue('login.vue',{ },  { });
+  // res.sendFile(__dirname + '..\\' + "\\pages\\login.vue" );
+//   model.save().then( data => {
+//     res.renderRoute( 'pages/login', { data: data } );
+// } );
+  // res.status(201).send(model);
+  // redirect('/');
 });
 
 module.exports = router;
