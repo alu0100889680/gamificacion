@@ -1,7 +1,14 @@
 const pkg = require("./package");
+const { resolve } = require("path")
 
 module.exports = {
+  rootDir: resolve(__dirname, '../..'),
+  buildDir: resolve(__dirname, '.nuxt'),
+  srcDir: __dirname,
+  serverMiddleware: ['../api/auth'],
+
   mode: "universal",
+
 
   /*
    ** Headers of the page
@@ -85,8 +92,30 @@ module.exports = {
    */
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
-    "bootstrap-vue/nuxt"
+    "bootstrap-vue/nuxt",
+    '@nuxtjs/axios',
+    '@nuxtjs/auth'
   ],
+  axios: {
+    proxy: true
+  },
+  auth: {
+    redirect: {
+      callback: '/callback'
+    },
+    strategies: {
+      local: {
+        endpoints: {
+          login: { propertyName: 'token.accessToken' }
+        }
+      },
+      auth0: {
+        domain: 'nuxt-auth.auth0.com',
+        client_id: 'q8lDHfBLJ-Fsziu7bf351OcYQAIe3UJv'
+      },
+
+    }
+  },
 
   /*
    ** Build configuration
@@ -96,6 +125,9 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) { }
+  },
+  router: {
+    middleware: ['auth']
   }
 };
