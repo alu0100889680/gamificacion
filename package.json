@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "author": "Aranza Cabrera",
+  "engines": {
+    "node": "11.3.0"
+  },
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
