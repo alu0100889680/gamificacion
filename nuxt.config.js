@@ -108,11 +108,7 @@ module.exports = {
         endpoints: {
           login: { propertyName: 'token.accessToken' }
         }
-      },
-      auth0: {
-        domain: 'nuxt-auth.auth0.com',
-        client_id: 'q8lDHfBLJ-Fsziu7bf351OcYQAIe3UJv'
-      },
+      }
 
     }
   },

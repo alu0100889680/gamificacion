@@ -4,9 +4,9 @@ const Model = require("./models/Tarea");
 var path = require('path');
 var expressVue = require("express-vue");
 const express = require('express')
- 
+
 var app = express();
- 
+
 const expressVueMiddleware = expressVue.init();
 app.use(expressVueMiddleware);
 
@@ -25,35 +25,35 @@ mongoose.connect(
   }
 );
 
-// GET
-router.get("/users", function(req, res) {
-  Model.find({}, (err, users) => {
-    if (err) {
-      res.status(404).send(err);
-    } else {
-      res.status(200).send(users);
-    }
-  });
-});
+// // GET
+// router.get("/users", function(req, res) {
+//   Model.find({}, (err, users) => {
+//     if (err) {
+//       res.status(404).send(err);
+//     } else {
+//       res.status(200).send(users);
+//     }
+//   });
+// });
 
 
 // post
 
-router.post("/login", function(req, res) {
-  let model = new Model(req.body);
-  model.save();
+// router.post("/login", function(req, res) {
+//   let model = new Model(req.body);
+//   model.save();
 
-  // res.send('login');
-  // console.log(path.join(__dirname + '/pages/login.vue') )
-  // res.render(path.join(__dirname + '../','../pages/login'));
+//   // res.send('login');
+//   // console.log(path.join(__dirname + '/pages/login.vue') )
+//   // res.render(path.join(__dirname + '../','../pages/login'));
 
-  // res.renderVue('login.vue',{ },  { });
-  // res.sendFile(__dirname + '..\\' + "\\pages\\login.vue" );
-//   model.save().then( data => {
-//     res.renderRoute( 'pages/login', { data: data } );
-// } );
-  // res.status(201).send(model);
-  // redirect('/');
-});
+//   // res.renderVue('login.vue',{ },  { });
+//   // res.sendFile(__dirname + '..\\' + "\\pages\\login.vue" );
+// //   model.save().then( data => {
+// //     res.renderRoute( 'pages/login', { data: data } );
+// // } );
+//   // res.status(201).send(model);
+//   // redirect('/');
+// });
 
 module.exports = router;
