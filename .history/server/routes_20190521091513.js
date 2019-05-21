@@ -13,7 +13,7 @@ app.use(expressVueMiddleware);
 const router = Router();
 
 const users = [];
-const db ="";
+
 mongoose.connect(
   "mongodb://aranza:pass19@ds147946.mlab.com:47946/gami_bd",
   (err, res) => {

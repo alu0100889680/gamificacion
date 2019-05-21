@@ -13,7 +13,7 @@ app.use(expressVueMiddleware);
 const router = Router();
 
 const users = [];
-const db ="";
+
 mongoose.connect(
   "mongodb://aranza:pass19@ds147946.mlab.com:47946/gami_bd",
   (err, res) => {
@@ -25,23 +25,23 @@ mongoose.connect(
   }
 );
 
-// // GET
-// router.get("/users", function(req, res) {
-//   Model.find({}, (err, users) => {
-//     if (err) {
-//       res.status(404).send(err);
-//     } else {
-//       res.status(200).send(users);
-//     }
-//   });
-// });
+// GET
+router.get("/users", function(req, res) {
+  Model.find({}, (err, users) => {
+    if (err) {
+      res.status(404).send(err);
+    } else {
+      res.status(200).send(users);
+    }
+  });
+});
 
 
 // post
 
-// router.post("/login", function(req, res) {
-//   let model = new Model(req.body);
-//   model.save();
+router.post("/login", function(req, res) {
+  let model = new Model(req.body);
+  model.save();
 
   // res.send('login');
   // console.log(path.join(__dirname + '/pages/login.vue') )
@@ -54,6 +54,6 @@ mongoose.connect(
 // } );
   // res.status(201).send(model);
   // redirect('/');
-// });
+});
 
 module.exports = router;
