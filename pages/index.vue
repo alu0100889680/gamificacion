@@ -7,7 +7,7 @@
           <b-btn class="ml-3" variant="info" to="/secure">Secure</b-btn>
           <b-btn class="ml-3" variant="danger" @click="$auth.logout()">Logout</b-btn>
         </template>
-        <b-btn variant="success" v-else to="/login">Login</b-btn>
+        <!-- <b-btn variant="success" v-else to="/login">Login</b-btn> -->
       </div>
     </b-jumbotron>
 
@@ -19,6 +19,5 @@
 </template>
 
 <script>
-export default {
-}
+export default {};
 </script>

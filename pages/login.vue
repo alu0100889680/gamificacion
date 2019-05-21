@@ -26,23 +26,6 @@
           </form>
         </b-card>
       </b-col>
-      <b-col md="1">
-        <div class="text-center">
-          <b-badge pill>OR</b-badge>
-        </div>
-      </b-col>
-      <b-col md="4" class="text-center pt-4">
-        <b-card title="Social Login" bg-variant="light">
-          <div v-for="s in strategies" :key="s.key" class="mb-2">
-            <b-btn
-              @click="$auth.loginWith(s.key)"
-              block
-              :style="{background: s.color}"
-              class="login-button"
-            >Login with {{ s.name }}</b-btn>
-          </div>
-        </b-card>
-      </b-col>
     </b-row>
   </div>
 </template>
@@ -66,7 +49,6 @@ export default {
     };
   },
   computed: {
-    strategies: () => [{ key: "auth0", name: "Auth0", color: "#ec5425" }],
     redirect() {
       return (
         this.$route.query.redirect &&
